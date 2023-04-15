@@ -1,3 +1,3 @@
-import { action } from "./index.js";
+import { action } from "./index.mjs";
 
 action();
