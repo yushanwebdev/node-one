@@ -1,8 +1,9 @@
-import { readFile } from "fs";
+import { readFile } from "fs/promises";
 
-readFile(new URL("app.mj", import.meta.url), "utf-8", (err, data) => {
-  if (err) {
-    throw err;
-  } else {
-  }
-});
+try {
+  const result = await readFile(new URL("app.mj", import.meta.url), "utf-8");
+} catch (error) {
+  console.log("error", error);
+}
+
+console.log("hello");
